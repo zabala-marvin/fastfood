@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="fastfood">
+<head>
+    <title>Fast Food</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/agency.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/signin.js"></script>
+    <script src="js/route.js"></script>
+    <script src="js/restaurant.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/order.js"></script>
+    <script src="js/payment.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/account.js"></script>
+
+</head>
+
+<body id="page-top" class="index" ng-controller="mainController">
+    
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar">SignUp</span>
+                    <span class="icon-bar">Log In</span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" ui-sref="home">Fast   <i class="fa fa-cutlery"></i> Food</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" ng-controller="signInModal" ng-click="open()">SignUp <i class="fa fa-user-plus"></i></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="" ng-controller="logInModal" ng-click="open()">Log In <i class="fa fa-user"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- LogIn Window-->
+        <div ng-controller="logInModal">
+            <script type="text/ng-template" id="logIn.html">
+                <div class="modal-header">
+                    <h3 class="modal-title">Fast Food</h3>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <tr>
+                            <td colspan="2">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-at"></i></span>
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" ng-Model="username">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1"><i class="fa fa-key"></i></span>
+                                    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" ng-Model="password">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <label><input type="checkbox">Remember Me</label>
+                                </div>
+                            </td>
+                            <td>
+                                <a ui-sref="#" class="pull-right">Forgot Password ?</a>    
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit" ng-click="ok(username, password)">Log In</button>
+                </div>
+            </script>
+        </div>
+        <!-- Sign In Modal -->
+        <div ng-controller="signInModal">
+            <script type="text/ng-template" id="signIn.html">
+                <div class="modal-header">
+                    <h3 class="modal-title">Fast Food</h3>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <div class="col-md-3">
+                                    <p>Full Name</p>
+                                </div>
+                                <div class="col-md-9">                                    
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="col-md-3">
+                                    <p>Email</p>
+                                </div>
+                                <div class="col-md-9">                                    
+                                    <input type="email" class="form-control" placeholder="">
+                                </div>
+                                <div class="col-md-3">
+                                    <p>Password</p>
+                                </div>
+                                <div class="col-md-9">                                    
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="col-md-3">
+                                    <p>Conform Password</p>
+                                </div>
+                                <div class="col-md-9">     
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit" ng-click="ok()">Sign UP</button>
+                </div>
+            </script>
+        </div>
+    </nav>
+
+    <section ui-view>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Your Website 2014</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>

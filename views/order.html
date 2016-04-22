@@ -1,0 +1,71 @@
+<div class="col-lg-12 nav-body">
+    <!-- Filter Menu -->
+    <div class="col-lg-2">
+        <div class="list-group">
+          <a href="#{{ menu_type.dish }}" class="list-group-item" ng-repeat="dish in menu_type.dish"> {{ dish }} </a>
+        </div>
+    </div>
+
+    <!-- Search Resutlt -->
+    <div class="col-lg-7">
+        <table class="table nav-result" ng-repeat="dish in menu_type.dish">
+            <tr>
+                <td>
+                    <h5 id="{{ dish }}"> {{ dish }} </h5>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="../img/{{ dish }}.png" class="rest-pic-menu">
+                </td>
+            </tr>
+            <tr class="nav-result-body" ng-controller="addOnModal" ng-repeat="menu in menu_type.menu | filter: { dish:dish }">
+                <td>
+                    <div class="col-lg-7">
+                        <img src="{{ menu.pic }}" class="rest-pic-sm"><h5>{{ menu.name }}</h5>
+                        {{ menu.desc }}
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="col-lg-9"><p>w/ 4pcs Shanghai Roll </p></div>
+                        <div class="col=lg-2"><p>{{ menu.price }}</p></div>
+                        <div class="col-lg-1"><i class="fa fa-plus-circle fa-2x" ng-click="add(menu.name, menu.price, menu.pic)"></i></div>
+                        <div class="col-lg-9"><p>w/ 4pc Soimai </p></div>
+                        <div class="col=lg-2"><p>{{ menu.price }}</p></div>
+                        <div class="col-lg-1"><i class="fa fa-plus-circle fa-2x" ng-click="open()"></i></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- Order Section -->
+    <div class="col-lg-3">
+        <table class="table nav-result nav-order">
+            <tr class="nav-result-header">
+                <td colspan="2"><i class="fa fa-shopping-cart nav-result-i"></i>Your Order</td>
+            </tr>
+            <tr ng-repeat="orders in order.list">
+                <td><h5>{{ orders.name }}</h5></td>
+                <td class="text-right"><p>{{ orders.price }}</p><i class="fa fa-times-circle fa-2x" ng-click="delete($index)"></i></td>
+            </tr>
+            <tr>
+                <td>Subtotal Fee</td>
+                <td class="text-right">{{ order.subtotal }}</td>
+            </tr>
+            <tr>
+                <td>Delivery Fee</td>
+                <td class="text-right">{{ restaurant.list[0].deliveryPrice }}</td>
+            </tr>
+            <tr>
+                <td><h5>Total Fee</h5></td>
+                <td class="text-right"><h5> {{ order.total }} </h5></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <form>
+                        <input type="submit" class="btn btn-primary" value="Place Order" ui-sref="restaurant.checkout"></input>
+                    </form>
+                </td>
+            </tr>
+        </table>
+        </div>
+    </div>

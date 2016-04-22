@@ -1,0 +1,130 @@
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <table class="table nav-result">
+                    <tr class="nav-result-header">
+                        <td colspan="2">
+                            <h5>Your Order</h5>
+                        </td>
+                    </tr>
+                    <tr class="nav-order-body" ng-repeat="order in order.list" ng-click="">
+                        <td>
+                            <div class="col-lg-6">
+                                <img src="{{ order.pic }}" class="rest-pic-sm"><h5>{{ order.name }}</h5>
+                                {{ order.desc }} 
+                            </div>
+                            <div class="col-lg-2"><p>{{ order.desc }} </p></div>
+                            <div class="col-lg-2"><p>{{ order.price }}</p></div>
+                            <div class="col-lg-2"><i class="fa fa-times-circle fa-4x"></i></i></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h5>Sub Total</h5></td>
+                        <td><h5 class="pull-right"> {{ order.subtotal }} </h5></td>
+                    </tr>
+                    <tr>
+                        <td><h5>Delivery Total</h5></td>
+                        <td><h5 class="pull-right"> {{ order.delivery }}</h5></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Total</h2></td>
+                        <td><h2 class="pull-right"> {{ order.total }}</h2></td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td><p>Delivery Time : {{ restaurant.list[0].deliveryTime }} min</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Enter Voucher code :</p>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="0000" aria-describedby="basic-addon1">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Order Section -->
+            <div class="col-lg-4">
+                <table class="table nav-result">
+                    <tr class="nav-result-header ">
+                        <td><i class="fa fa-shopping-bag"></i><p>Delivery</p></td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <form>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="A" checked ng-model="payment_type">
+                                    <h5>Type A (Delivery)</h5>Your order will be delivered to your address.
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="B" ng-model="payment_type">
+                                    <h5>Type B (Pick Up)</h5>You will pick up the order yourself at restaurant.
+                                </label>
+                            </div>
+                        </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="ASAP" checked ng-model="deliveryTime">
+                                <h5>ASAP</h5> 12:00 AM
+                              </label>
+                            </div>
+                            <div class="radio">
+                              <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="DATE" ng-model="deliveryTime">
+                                <h5>Specify Date and Time </h5>
+                              </label>
+                            </div>
+                        </form>
+                            <form class="form-inline">
+                                <select class="form-control">
+                                  <option>April 1</option>
+                                  <option>April 2</option>
+                                  <option>April 3</option>
+                                  <option>April 4</option>
+                                  <option>April 5</option>
+                                </select>
+                                <select class="form-control">
+                                  <option>1:00</option>
+                                  <option>2:00</option>
+                                  <option>3:00</option>
+                                  <option>4:00</option>
+                                  <option>5:00</option>
+                                </select>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <textarea class="form-control" rows="3" placeholder="Comment"></textarea>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <form>
+                                <input type="submit" class="btn btn-primary" value="Check Out" ui-sref="restaurant.payment"></input>
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,47 @@
+html {
+	height: 100%;
+}
+
+body {
+	background-size: cover;
+	background-position: center;
+	font-family: Montserrat;
+}
+
+.location {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+
+.container {
+	text-align: center;
+}
+
+#content {
+	text-align: center;
+	padding-top: 15%;
+	padding-bottom: 15%;
+}
+
+button {
+	float: left;
+	width: 20%;
+}
+
+h1 {
+	font-weight: 300;
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 24;
+	font-weight: 300;
+}
+
+hr {
+	width: 400px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}

@@ -1,0 +1,18 @@
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 nav-body">
+                <table class="table">
+                    <tr ng-repeat="rest in restaurant.list | filter: { name: search.text }">
+                        <td ng-repeat="review in rest.review">
+                            <div class="col-md-2 text-center" ><img src="" class="userpic"><p>{{ review.name }}</p></div>
+                            <div class="col-md-10">{{ review.rating }}
+                            <p>{{ review.review }}</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

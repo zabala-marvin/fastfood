@@ -1,0 +1,37 @@
+<section id="services">
+    <div class="container container-order" ng-repeat="menu_type in restaurant.list | filter: { name: search.text }">
+        <div class="row">
+            <!-- Link -->
+            <div class="col-lg-12 nav-nav">
+                <table class="table">
+                    <tr>
+                        <td colspan="2">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-at"></i></span>
+                                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" ng-Model="username">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon1"><i class="fa fa-key"></i></span>
+                                <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" ng-Model="password">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="checkbox">
+                                <label><input type="checkbox">Remember Me</label>
+                            </div>
+                        </td>
+                        <td>
+                            <a ui-sref="#" class="pull-right">Forgot Password ?</a>    
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

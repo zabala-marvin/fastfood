@@ -1,0 +1,67 @@
+<!-- ORDER ADD ON WINDOW -->
+<div ng-controller="addOnModal">
+            <script type="text/ng-template" id="addOn.html">
+                <div class="modal-header">
+                    <h3 class="modal-title">...more Add ON</h3>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <label><input type="checkbox">Add on .1</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="checkbox">
+                                    <label><input type="checkbox">Add on .2</label>
+                                </div>        
+                            </td>
+                        </tr>
+                        <tr>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" type="button" ng-click="ok()">Place Order</button>
+                </div>
+            </script>
+        </div>
+
+<header>
+    <div class="container header-profile" ng-repeat="rest in restaurant.list | filter: { name: search.text }">
+        <div class="intro-text">
+            <div class="col-lg-12 rest-desc">
+                <img src="{{ rest.pic }}" class="rest-pic">
+                <h2 class="rest-name">{{ rest.name }}</h2>
+                <h3 class="rest-desc">{{ rest.desc }}</h3>
+                <p>Open Hours {{ rest.openHours }}:00 - {{ rest.closedHours }}:00</p>
+                <span class="label label-success">Open</span><span class="label label-primary">Pre - Order</span><span class="label label-info">Vouchers</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Search Section -->
+<section id="services">
+    <div class="container container-order" ng-repeat="menu_type in restaurant.list | filter: { name: search.text }">
+        <div class="row">
+            <!-- Link -->
+            <div class="col-lg-12 nav-nav">
+                <ul class="list-inline nav-link text-center pull-left">
+                    <li><a ui-sref="home"><p>Home</p></a></li>
+                    <li active><a ui-sref="restaurant.order"><p>Menu</p></a></li>
+                    <li><a ui-sref="restaurant.review"><p>Review</p></a></li>
+                    <li><a ui-sref=""><p>Info</p></a></li>
+                </ul>
+            </div>
+
+                <section ui-view>
+                </section>
+            
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,320 @@
+<div ng-controller="logInModal">
+    <script type="text/ng-template" id="reviewModal.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Write a Review</h3>
+        </div>
+        <div class="modal-body">
+           <form>
+                <textarea class="form-control" rows="3" placeholder="say something" ng-model="review"></textarea>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit" ng-click="ok(review)">ok</button>
+        </div>
+    </script>
+</div>
+
+<!-- Receipt Window-->
+<div ng-controller="receiptModal">
+    <script type="text/ng-template" id="receipt.html">
+        <div class="modal-header">
+            <div class="col-md-10">
+                <h3 class="modal-title">Receipt (#)</h3>
+            </div>
+            <div class="col-md-2 iconModal">
+                <ul class="list-inline social-buttons">
+                    <li><a href="#"><i class="fa fa-print"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="modal-body">
+            <table class="table">
+                <tr>
+                    <td>
+                        <div class="col-lg-4"><p ng-model="sample">Receipt # </p></div>
+                        <div class="col-lg-8"><p>FS4F54FS3V4D5</p></div>
+                        <div class="col-lg-4"><p>Date :</p></div>
+                        <div class="col-lg-8"><p>11:30 AM </p></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="col-lg-4"><p>Name</p></div>
+                        <div class="col-lg-8"><p>{{ account.list[0].info.firstname }} {{ account.list[0].info.lastname }}</p></div>
+                        <div class="col-lg-4"><p>Email</p></div>
+                        <div class="col-lg-8"><p>{{ account.list[0].info.email }}</p></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="col-lg-4"><p><strong>Total Price</strong></p></div>
+                        <div class="col-lg-8"><p align="right"><strong>{{ order.total }}</strong></p></div>
+                        <div class="col-lg-4"><p><strong>Subtotal Price</strong></p></div>
+                        <div class="col-lg-8"><p align="right"><strong>{{ order.subtotal }}</strong></p></div>
+                        <div class="col-lg-4"><p><strong>TAX</strong></p></div>
+                        <div class="col-lg-8"><p align="right"><strong>{{ order.tax }}</strong></p></div>
+                        <div class="col-lg-4"><p><strong>Delivery Price</strong></p></div>
+                        <div class="col-lg-8"><p align="right"><strong>{{ order.deliveryPrice }}</strong></p></div>
+                        <div class="col-lg-4"><p><strong>Voucher Discount</strong></p></div>
+                        <div class="col-lg-8"><p align="right"><strong>{{ order.voucher }} #AF54D54D</strong></p></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="col-lg-4"><p>Card Name</p></div>
+                        <div class="col-lg-8"><p>VISA</p></div>
+                        <div class="col-lg-4"><p>Card #</p></div>
+                        <div class="col-lg-8"><p>65FD5FG46DG4</p></div>
+                        <div class="col-lg-4"><p>Card Type</p></div>
+                        <div class="col-lg-8"><p>ATM</p></div>
+                        <div class="col-lg-4"><p>EXP Date</p></div>
+                        <div class="col-lg-8"><p>XXXX - XX</p></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="col-lg-4"><p>Delvery Time</p></div>
+                        <div class="col-lg-8"><p>{{ order.deliveryTime }}</p></div>
+                        <div class="col-lg-4"><p>Delivery Place</p></div>
+                        <div class="col-lg-8"><p>{{ order.deliveryAdd }}</p></div>
+                        <div class="col-lg-4"><p>Payment Type</p></div>
+                        <div class="col-lg-8"><p>{{ order.payment_type }}</p></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><h5>Order List</h5></td>
+                </tr>
+                <tr ng-repeat="order in order.list">
+                    <td colspan="2">
+                        <div class="col-lg-4"><p>{{ order.name }}</p></div>
+                        <div class="col-lg-8"><p align="right">{{ order.price }}</p></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="modal-footer" ng-controller="reviewModal">
+            <button class="btn btn-primary" type="button" ng-click="open()">OK</button>
+        </div>
+    </script>
+</div>
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+                    <table class="table nav-result">
+                        <tr class="nav-result-header">
+                            <td colspan="2"><h5>Account Info</h5></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="col-lg-4">
+                                    <div class="row">
+                                        <p>Account Name</p>
+                                    </div>
+                                    <div class="row">
+                                        <p>Email</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <div class="row">
+                                        <p>{{ account.list[0].info.firstname }} {{ account.list[0].info.lastname }}</p>
+                                    </div>
+                                    <div class="row">
+                                        <p>{{ account.list[0].info.email }}</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row">
+                    <table class="table nav-result">
+                        <tr class="nav-result-header">
+                            <td colspan="2"><h5>Payment Info</h5></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                    <uib-accordion close-others="true">
+                                        <uib-accordion-group heading="Online Payment">
+                                            <div class="col-lg-12">
+                                                <form>
+                                                    <p>Select Credit Card Info</p>
+                                                    <select class="form-control">
+                                                        <option>12345</option>
+                                                    </select>
+                                                </form>
+                                            </div>
+                                            <div class="col-lg-12"><p>Add New Credit Card</p></div>
+                                            <table class="table">
+                                                <tr>
+                                                    <td><p>Card Number</p></td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="Card Number">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Expiration</p></td>
+                                                    <td>
+                                                        <div class="btn-group">
+                                                          <button type="button" class="btn btn-default">Month</button>
+                                                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <span class="caret"></span>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                          </button>
+                                                          <ul class="dropdown-menu">
+                                                            <li><a href="#">Jan</a></li>
+                                                            <li><a href="#">Feb</a></li>
+                                                            <li><a href="#">Mar</a></li>
+                                                            <li><a href="#">Apr</a></li>
+                                                            <li><a href="#">May</a></li>
+                                                          </ul>
+                                                        </div>
+                                                        <div class="btn-group">
+                                                          <button type="button" class="btn btn-default">Year</button>
+                                                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            <span class="caret"></span>
+                                                            <span class="sr-only">Toggle Dropdown</span>
+                                                          </button>
+                                                          <ul class="dropdown-menu">
+                                                            <li><a href="#">2016</a></li>
+                                                            <li><a href="#">2017</a></li>
+                                                            <li><a href="#">2018</a></li>
+                                                            <li><a href="#">2019</a></li>
+                                                            <li><a href="#">2020</a></li>
+                                                          </ul>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>CVV</p></td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="CVV">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><p>Billing ZIP</p></td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="Billing ZIP">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <div class="col-lg-3"><button type="button" class="btn btn-primary">Save</button></div>      
+                                                    </td>
+                                                </tr>
+                                          </table>
+                                        </uib-accordion-group>
+                                        <uib-accordion-group heading="On Deliver Payment">
+                                            <div class="col-lg-12">
+                                                <form>
+                                                    <p>Select Address</p>
+                                                    <select class="form-control">
+                                                        <option ng-repeat="add in account.list[0].add">{{ add.address1 }}, {{ add.address2 }}, {{ add.address3 }}, {{ add.city }}, {{ add.state }}, {{ add.zip }}</option>
+                                                    </select>
+                                                </form>
+                                            </div>
+                                            <div class="col-lg-12"><p>Enter New Address</p></div>
+                                            <table class="table">
+                                                <tr>
+                                                    <td colspan="2">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="Address">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="Apt # / Suite">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="City">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="State">
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="ZIP">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="More Info">
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">
+                                                        <div class="col-lg-3"><button type="button" class="btn btn-primary">Save</button></div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </uib-accordion-group>
+                                    </uib-accordion>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr ng-controller="receiptModal">
+                            <td colspan="2"><button type="button" class="btn btn-primary btn-lg" ng-click="open()">Pay & Place Order</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- Order Section -->
+            <div class="col-lg-4">
+                
+                <table class="table nav-result">
+                    <tr class="nav-result-header ">
+                        <td colspan="2"><i class="fa fa-shopping-cart nav-result-i"></i>Delivery
+                        <h2 class="pull-right">45 min</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h2>Total</h2></td>
+                        <td><h2 class="pull-right">$ {{ order.total }}</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h5>Sub Total</h5></td>
+                        <td><h5 class="pull-right">$ {{ order.subtotal }}</h5></td>
+                    </tr>
+                    <tr>
+                        <td><h5>Delivery Fee</h5></td>
+                        <td><h5 class="pull-right">$ {{ order.delivery }}</h5></td>
+                    </tr>
+                </table>
+                <table class="table nav-result">
+                    <tr class="nav-result-header">
+                        <td colspan="2">
+                            <h5>Your Order</h5>
+                        </td>
+                    </tr>
+                    <tr class="nav-order-body" ng-repeat="order in order.list">
+                        <td>
+                            <div class="col-lg-8">
+                                <h5>{{ order.name }}</h5>
+                                {{ order.desc }}
+                            </div>
+                            <div class="col-lg-2"><p>{{ order.desc }}</p></div>
+                            <div class="col-lg-2"><p>{{ order.price }}</p></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
