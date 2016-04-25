@@ -1,21 +1,16 @@
-fastfood.factory('search', function(){
-    return { text: '' };
-});
-
-fastfood.controller('searchController', function($scope, $log, $state, $http, search, restaurantService, searchService) {
+fastfood.controller('searchController', function($scope, $log, $state, $http, restaurantService, searchService) {
 
 	$http.get('http://fastfood.local/json/database.json').success(function(data) {
   		$scope.data = data;
   		//console.log(data.restaurant[0].name);
     });
 
-  $scope.searchLocation = searchService.search;
-  console.log("search query :" + $scope.search);
+  $scope.filter_location = searchService.search;
+  console.log("Location query :" + $scope.filter_location);
   $scope.restaurant = restaurantService.restaurant;
-	$scope.search = search;
 
 	$scope.order = function (search) {
-		$scope.search.text = search;
+		$scope.search = search;
 		$state.transitionTo('restaurant');
 	}
 

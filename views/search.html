@@ -16,7 +16,7 @@
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                        <input type="text" class="form-control" id="" placeholder="Search" ng-Model="search.text">
+                        <input type="text" class="form-control" id="" placeholder="Search" ng-Model="search">
                     </div>
                 </div>
                 <hr>
@@ -107,7 +107,7 @@
                     <tr class="nav-result-body search-animate-container search-repeat" 
                         ng-repeat="restaurant in data.restaurant | 
                                 orderBy: filter_order | 
-                                filter: {name: search.text, 
+                                filter: {name: search, 
                                         onlinePay: filter_onlinePay(onlinePay), 
                                         preOrder: filter_preOrder(preOrder), 
                                         vouchers: filter_vouchers(vouchers), 
