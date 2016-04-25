@@ -4,12 +4,9 @@ fastfood.factory('search', function(){
 
 fastfood.controller('searchController', function($scope, $log, $state, $http, search, restaurantService, searchService) {
 
-	//$http.get('/json/database.json').then(console.log('success'), console.log('Error'));
-
-	$http.get('http://fastfood.local/json/database.json')
-	.success(function(data) {
+	$http.get('http://fastfood.local/json/database.json').success(function(data) {
   		$scope.data = data;
-  		console.log(data);
+  		//console.log(data.restaurant[0].name);
     });
 
   $scope.searchLocation = searchService.search;
@@ -25,16 +22,13 @@ fastfood.controller('searchController', function($scope, $log, $state, $http, se
 	$scope.cuisine_click = function (cuisine) {
 		$scope.cuisine = cuisine;
 	}
-
 	$scope.range = function(count){
   		var ratings = []; 
-		
 		for (var i = 0; i < count; i++) { 
 		  ratings.push(i) 
 		} 
 		  return ratings;
-	};
-
+	}
 	$scope.filter_onlinePay = function (onlinePay) {
 		if (onlinePay)
 			return (true);
@@ -68,6 +62,5 @@ fastfood.controller('searchController', function($scope, $log, $state, $http, se
 				zip: 0000
 			}
 		]
-	};
-
+	}
 });

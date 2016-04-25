@@ -29,7 +29,7 @@
                         <td>
                             <form>
                                 <p>Search by </p>
-                                <select class="form-control" ng-Model="filter_order">
+                                <select class="form-control" ng-model="filter_order">
                                     <option value="" select>Relevance</option>
                                     <option value="rating">Rating</option>
                                     <option value="deliveryFee">Delivery Fee</option>
@@ -37,11 +37,15 @@
                                     <option value="budget">Budget</option>
                                 </select>
                             </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
                             <form>
-                                <p>Change Location</p>
-                                <select class="form-control" ng-model="location">
+                                <p>Search by </p>
+                                <select class="form-control" ng-model="filter_location">
                                     <option value="" select>Location</option>
-                                    <option ng-repeat="location in data.location" value="{{ location }}">{{ location }}</option>
+                                    <option value="{{ location }}" ng-repeat="location in data.location">{{ location }}</option>
                                 </select>
                             </form>
                         </td>
@@ -76,7 +80,7 @@
                             <form class="form-horizontal">
                                 <div class="radio">
                                     <label>
-                                        <input type="radio" name="cuisines" ng-value="cuisine" ng-click="cuisine_click()">All Cuisines
+                                        <input type="radio" name="cuisines" ng-value="cuisine" ng-click="cuisine_click()" checked="true">All Cuisines
                                     </label>
                                 </div>
                                 <div class="radio" ng-repeat="cuisine in data.cuisines">
@@ -108,7 +112,7 @@
                                         preOrder: filter_preOrder(preOrder), 
                                         vouchers: filter_vouchers(vouchers), 
                                         deal: filter_deal(deal), 
-                                        location: location, 
+                                        location: filter_location, 
                                         desc: cuisine } ">
                         <td ng-click="order(restaurant.name)">
                             <div class="col-lg-6">
