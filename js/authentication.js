@@ -1,10 +1,10 @@
-fastfood.service('authenticationService', function ($scope, $rootScope, $http, $cookieStore, $timeout) {
+fastfood.service('authenticationService', function ($rootScope, $http, $timeout) {
 
-    this.logIn = function (username, password, response) {
+    this.logIn = function (username, password, callback) {
 
-        $setTimeout(function() {
-
-        }, 1000);
+        if (username == "username" && password == "pass" )
+            response = true;
+        callback(response);
     }
 
     this.setCredencials = function () {
@@ -15,12 +15,12 @@ fastfood.service('authenticationService', function ($scope, $rootScope, $http, $
                 authen: "authen"
             }
         };
-        $cookieStore.put('globals', $rootScope.globals);
+        //$cookies.put('globals', $rootScope.globals);
     }
 
     this.clearCredencials = function () {
 
         $rootScope.globals = {};
-        $cookieStore.remove('globals');
+        //$cookies.remove('globals');
     }
 })

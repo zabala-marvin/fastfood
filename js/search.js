@@ -1,6 +1,7 @@
 fastfood.controller('searchController', function($scope, $log, $state, $http, restaurantService, searchService) {
 
-	$http.get('http://fastfood.local/json/database.json').success(function(data) {
+	$http.get('http://fastfood.local/json/database.json')
+	.success(function(data) {
   		$scope.data = data;
   		//console.log(data.restaurant[0].name);
     });

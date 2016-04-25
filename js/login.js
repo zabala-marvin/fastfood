@@ -1,8 +1,3 @@
-fastfood.controller('logInController', function ($scope, authenticationService) {
-
-})
-
-
 fastfood.controller('logInModal', function ($scope, $uibModal, $log) {
 
   $scope.animationsEnabled = true;
@@ -28,12 +23,23 @@ fastfood.controller('logInModal', function ($scope, $uibModal, $log) {
   };
 });
 
-fastfood.controller('logInInstance', function ($scope, $uibModalInstance) {
+fastfood.controller('logInInstance', function ($scope, $state, $uibModalInstance, authenticationService) {
 
-  $scope.ok = function (email, password) {
+    $scope.authenticationService = authenticationService;
 
-    $uibModalInstance.close($scope.selected.item);
-  };
+    $scope.ok = function (username, password) {
+
+        $scope.authenticationService.logIn(username, password, function (response) {
+            if (response)
+              console.log("Log In success");
+            else
+              console.log("log In failed");
+        });
+
+        //$uibModalInstance.close($scope.selected.item);
+        $uibModalInstance.dismiss('cancel');
+        $state.transitionTo('account');
+    };
 
   $scope.cancel = function () {
     $uibModalInstance.dismiss('cancel');
