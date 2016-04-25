@@ -1,3 +1,21 @@
+fastfood.service('authenticationService', function ($scope, $rootScope, $http, $cookieStore) {
+
+    this.setCredencial = function () {
+
+        $rootScope.globals = {
+            currentUser: {
+                username: "username",
+                authdata: "authdata"
+            }
+        };
+    }
+
+    this.clearCredencials = function () {
+
+        $rootScope.globals = {};
+    }
+})
+
 fastfood.controller('logInModal', function ($scope, $uibModal, $log) {
 
   $scope.animationsEnabled = true;
