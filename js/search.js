@@ -4,9 +4,11 @@ fastfood.factory('search', function(){
 
 fastfood.controller('searchController', function($scope, $log, $state, $http, search, restaurantService, searchService) {
 
+	//$http.get('/json/database.json').then(console.log('success'), console.log('Error'));
+
 	$http.get('http://127.0.0.1/fastfood.local/json/database.json')
 	.success(function() {
-		console.log('success');
+		//console.log('success');
 	})
 
   $scope.searchLocation = searchService.search;

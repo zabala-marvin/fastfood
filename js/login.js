@@ -1,20 +1,7 @@
-fastfood.service('authenticationService', function ($scope, $rootScope, $http, $cookieStore) {
+fastfood.controller('logInController', function ($scope, authenticationService) {
 
-    this.setCredencial = function () {
-
-        $rootScope.globals = {
-            currentUser: {
-                username: "username",
-                authdata: "authdata"
-            }
-        };
-    }
-
-    this.clearCredencials = function () {
-
-        $rootScope.globals = {};
-    }
 })
+
 
 fastfood.controller('logInModal', function ($scope, $uibModal, $log) {
 

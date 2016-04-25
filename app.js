@@ -13,12 +13,10 @@ fastfood.controller('mainController', function($scope, $state, searchService) {
 
 	$scope.$watch('search', function () {
 		searchService.search = $scope.search;
-		console.log($scope.search);
 	});
-
 	$state.transitionTo('home');
 });
 
 fastfood.service('searchService', function () {
-  this.search = '';
+	this.search = '';
 })

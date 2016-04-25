@@ -1,8 +1,8 @@
-fastfood.controller('orderController', function($scope, $log, $filter, $http, search, restaurantService, orderService) {
+fastfood.controller('orderController', function($scope, $log, $filter, $http, search, restaurantService, orderService) {	
 
 	$http.get('http://127.0.0.1/fastfood/json/database.json')
 	.success(function() {
-		console.log('success');
+		//console.log('success');
 	})
 
 	$scope.restaurant = restaurantService.restaurant;
