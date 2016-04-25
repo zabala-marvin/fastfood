@@ -1,5 +1,7 @@
 fastfood.controller('paymentController', function($scope, $log, restaurantService, orderService, accountService) {
 
+  //scope.collapsed = false;
+
 	$scope.account = accountService.account;
 	$scope.order = orderService.order;
 

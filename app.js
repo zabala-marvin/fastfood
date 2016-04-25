@@ -18,5 +18,5 @@ fastfood.controller('mainController', function($scope, $state, searchService) {
 });
 
 fastfood.service('searchService', function () {
-	this.search = '';
+	this.search = "";
 })

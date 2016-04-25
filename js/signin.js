@@ -1,3 +1,6 @@
+fastfood.service('account')
+
+
 fastfood.controller('signInModal', function ($scope, $uibModal, $log) {
 
   $scope.animationsEnabled = true;
@@ -23,11 +26,19 @@ fastfood.controller('signInModal', function ($scope, $uibModal, $log) {
   };
 });
 
-fastfood.controller('signInInstance', function ($scope, $uibModalInstance) {
+fastfood.controller('signInInstance', function ($scope, $http, $uibModalInstance) {
 
   $scope.ok = function (email, password) {
 
-    $uibModalInstance.close($scope.selected.item);
+    $scope.user = {};
+    $scope.user.email = email;
+    $scope.user.password = password;
+
+    $http.get('http://127.0.0.1/fastfood/json/database.json')
+      .success(function(data) {
+        console.log(data);
+    })
+    //$uibModalInstance.close($scope.selected.item);
   };
 
   $scope.cancel = function () {

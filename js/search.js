@@ -11,7 +11,9 @@ fastfood.controller('searchController', function($scope, $log, $state, $http, re
   $scope.restaurant = restaurantService.restaurant;
 
 	$scope.order = function (search) {
-		$scope.search = search;
+
+		searchService.search = search;
+		console.log(searchService.search);
 		$state.transitionTo('restaurant');
 	}
 

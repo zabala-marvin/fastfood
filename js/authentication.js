@@ -2,6 +2,9 @@ fastfood.service('authenticationService', function ($rootScope, $http, $timeout)
 
     this.logIn = function (username, password, callback) {
 
+        //$scope.data = "";
+        $http.get('http://127.0.0.1/fastfood/json/database.json').then(function (data) {console.log(data)}), console.log("Error");
+
         if (username == "username" && password == "pass" )
             response = true;
         callback(response);

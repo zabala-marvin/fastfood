@@ -104,6 +104,30 @@
             <div class="col-lg-8">
                 <div class="row">
                     <table class="table nav-result">
+                        <tr>
+                            <td>
+                                <form>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="A" ng-click="collapsedCard = !collaspedCard">
+                                            <h5>Pay Online</h5>
+                                        </label>
+                                    </div>
+                                    <div uib-collapse="collapsedCard">
+                                        <div class="well well-lg">Some content</div>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="B" ng-click="collapsed">
+                                            <h5>Pay on Pick-Up</h5>
+                                        </label>
+                                    </div>
+                                    <div uib-collapse="collapsed">
+                                        <div class="well well-lg">Some content</div>
+                                    </div>
+                                </form>
+                            </td>
+                        </tr>
                         <tr class="nav-result-header">
                             <td colspan="2"><h5>Account Info</h5></td>
                         </tr>
