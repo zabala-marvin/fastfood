@@ -16,57 +16,57 @@
                 <tr>
                     <td>
                         <div class="col-lg-4"><p>Receipt # </p></div>
-                        <div class="col-lg-8"><p>{{ account.list[0].order_history[0].receiptCode }}</p></div>
+                        <div class="col-lg-8"><p>{{ data.account.order_history[0].receiptCode }}</p></div>
                         <div class="col-lg-4"><p>Date :</p></div>
-                        <div class="col-lg-8"><p>{{ account.list[0].order_history[0].date }}</p></div>
+                        <div class="col-lg-8"><p>{{ data.account.order_history[0].date }}</p></div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="col-lg-4"><p>Name</p></div>
-                        <div class="col-lg-8"><p>{{ account.list[0].order_history[index].name }}</p></div>
+                        <div class="col-lg-8"><p>{{ data.account.order_history[index].name }}</p></div>
                         <div class="col-lg-4"><p>Email</p></div>
-                        <div class="col-lg-8"><p>{{ account.list[0].order_history[index].email }}</p></div>
+                        <div class="col-lg-8"><p>{{ data.account.order_history[index].email }}</p></div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="col-lg-4"><p><strong>Total Price</strong></p></div>
-                        <div class="col-lg-8"><p align="right"><strong>{{ account.list[0].order_history[index].total }}</strong></p></div>
+                        <div class="col-lg-8"><p align="right"><strong>{{ data.account.order_history[index].total }}</strong></p></div>
                         <div class="col-lg-4"><p><strong>Subtotal Price</strong></p></div>
-                        <div class="col-lg-8"><p align="right"><strong>{{ account.list[0].order_history[index].subtotal }}</strong></p></div>
+                        <div class="col-lg-8"><p align="right"><strong>{{ data.account.order_history[index].subtotal }}</strong></p></div>
                         <div class="col-lg-4"><p><strong>Delivery Price</strong></p></div>
-                        <div class="col-lg-8"><p align="right"><strong>{{ account.list[0].order_history[index].deliveryPrice }}</strong></p></div>
+                        <div class="col-lg-8"><p align="right"><strong>{{ data.account.order_history[index].deliveryPrice }}</strong></p></div>
                         <div class="col-lg-4"><p><strong>Voucher Discount</strong></p></div>
-                        <div class="col-lg-8"><p align="right"><strong>{{ account.list[0].order_history[index].voucher }} #AF54D54D</strong></p></div>
+                        <div class="col-lg-8"><p align="right"><strong>{{ data.account.order_history[index].voucher }} #AF54D54D</strong></p></div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="col-lg-4"><p>Card Name</p></div>
-                        <div class="col-lg-8"><p>{{ account.list[0].order_history[index].cardName }}</p></div>
+                        <div class="col-lg-8"><p>{{ data.account.order_history[index].cardName }}</p></div>
                         <div class="col-lg-4"><p>Card #</p></div>
-                        <div class="col-lg-8"><p>{{ account.list[0].order_history[index].cardNumber }}</p></div>
+                        <div class="col-lg-8"><p>{{ data.account.order_history[index].cardNumber }}</p></div>
                         <div class="col-lg-4"><p>Card Type</p></div>
-                        <div class="col-lg-8"><p>{{ account.list[0].order_history[index].cardType }}</p></div>
+                        <div class="col-lg-8"><p>{{ data.account.order_history[index].cardType }}</p></div>
                         <div class="col-lg-4"><p>EXP Date</p></div>
-                        <div class="col-lg-8"><p>{{ account.list[0].order_history[index].cardExp }}</p></div>
+                        <div class="col-lg-8"><p>{{ data.account.order_history[index].cardExp }}</p></div>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <div class="col-lg-4"><p>Delvery Time</p></div>
-                        <div class="col-lg-8"><p>{{ account.list[0].order_history[index].deliveryTime }}</p></div>
+                        <div class="col-lg-8"><p>{{ data.account.order_history[index].deliveryTime }}</p></div>
                         <div class="col-lg-4"><p>Delivery Place</p></div>
-                        <div class="col-lg-8"><p>{{ account.list[0].order_history[index].deliveryAdd }}</p></div>
+                        <div class="col-lg-8"><p>{{ data.account.order_history[index].deliveryAdd }}</p></div>
                         <div class="col-lg-4"><p>Payment Type</p></div>
-                        <div class="col-lg-8"><p>{{ account.list[0].order_history[index].payment_type }}</p></div>
+                        <div class="col-lg-8"><p>{{ data.account.order_history[index].payment_type }}</p></div>
                     </td>
                 </tr>
                 <tr>
                     <td><h5>Order List</h5></td>
                 </tr>
-                <tr ng-repeat="order in account.list[0].order_history[index].list track by $index">
+                <tr ng-repeat="order in data.account.order_history[index].list track by $index">
                     <td>
                         <div class="col-lg-4"><p>{{ order.name }}</p></div>
                         <div class="col-lg-8"><p align="right">{{ order.price }}</p></div>
@@ -100,7 +100,7 @@
                 </div>
             </div>
             <div class="col-lg-10 nav-display">
-                <table class="table nav-account" ng-repeat="info in account.list">
+                <table class="table nav-account">
                     <tr>
                         <td colspan="2"><h4>Account</h4></td>
                     </tr>
@@ -108,7 +108,7 @@
                         <td><p>First Name</p></td>
                         <td>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="{{ info.info.firstname }}" ng-Model="user.firstname">
+                                <input type="text" class="form-control" placeholder="{{ data.account[0].info.firstname }}" ng-Model="user.firstname">
                             </div>
                         </td>
                     </tr>
@@ -116,7 +116,7 @@
                         <td><p>Last Name</p></td>
                         <td>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="{{ info.info.lastname }}" ng-Model="user.lastname">
+                                <input type="text" class="form-control" placeholder="{{ data.account[0].info.lastname }}" ng-Model="user.lastname">
                             </div>
                         </td>
                     </tr>
@@ -124,7 +124,7 @@
                         <td><p>Password</p></td>
                         <td>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="{{info.info.password}}" ng-Model="user.password">
+                                <input type="text" class="form-control" placeholder="{{ data.account[0].info.password }}" ng-Model="user.password">
                             </div>
                         </td>
                     </tr>
@@ -132,7 +132,7 @@
                         <td><p>Email</p></td>
                         <td>
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="{{info.info.email}}" ng-Model="user.email">
+                                <input type="text" class="form-control" placeholder="{{ data.account[0].info.email }}" ng-Model="user.email">
                             </div>
                         </td>
                     </tr>
@@ -149,7 +149,7 @@
                     <tr>
                         <td colspan="3">
                             <div class="list-group">
-                                <a href="" class="list-group-item" ng-repeat="add in account.list[0].add">{{ add.address1 }}, {{ add.address2 }}, {{ add.address3 }}, {{ add.city }}, {{ add.state }}, {{ add.zip }}
+                                <a href="" class="list-group-item" ng-repeat="add in data.account[0].add" ng-click="display_add($index)">{{ add.address1 }}, {{ add.address2 }}, {{ add.address3 }}, {{ add.city }}, {{ add.state }}, {{ add.zip }}
                                     <i class="sample"><i class="fa fa-times iconModal"></i></i>
                                 </a>
                             </div>
@@ -192,7 +192,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><button type="button" class="btn btn-primary" ng-click="account.update_add(add)">Save</button></td>
+                        <td><button type="button" class="btn btn-primary" ng-click="update_add(add, update)">{{ add.button }}</button></td>
                         <td></td>
                     </tr>
                 </table>
@@ -204,7 +204,7 @@
                     <tr>
                         <td colspan="2">
                             <div class="list-group">
-                                <a href="" class="list-group-item" ng-repeat="card in account.list[0].card">Card # : {{ card.number }} | Expiration Date : {{ card.exp_month }}-{{ card.exp_year }} | CVV : {{ card.cvv }} | ZIP : {{ card.zip }}
+                                <a href="" class="list-group-item" ng-repeat="card in data.account[0].card" ng-click="display_card($index)">Card # : {{ card.number }} | Expiration Date : {{ card.exp_month }}-{{ card.exp_year }} | CVV : {{ card.cvv }} | ZIP : {{ card.zip }}
                                 <i class="sample"><i class="fa fa-times iconModal"></i></i>
                                 </a>
                             </div>
@@ -270,8 +270,11 @@
                         <td></td>
                     </tr>
                     <tr>
-                        <td><button type="button" class="btn btn-primary" ng-click="account.update_card(card)">Save</button></td>
-                        <td></td>
+                        <td>
+                            <div class="col-sm-4">
+                                <button type="button" class="btn btn-primary" ng-click="update_card(card, index)">{{ card.button }}</button>
+                            </div>
+                        </td>
                     </tr>
                 </table>
                 <!-- Order History-->
@@ -279,7 +282,7 @@
                     <tr>
                         <td><h4>Order's</h4></td>
                     </tr>
-                    <tr ng-repeat="order in account.list[0].order_history track by $index">
+                    <tr ng-repeat="order in data.account[0].order_history track by $index">
                         <td>
                             <div class="col-md-12">
                                 <ul class="list-inline social-buttons iconPreview" ng-controller="accountModal">
@@ -295,7 +298,7 @@
                     <tr>
                         <td><h4>Review</h4></td>
                     </tr>
-                    <tr ng-repeat="review in account.list[0].reviews">
+                    <tr ng-repeat="review in data.account[0].reviews">
                         <td>
                             <div class="col-sm-4"><p>{{ review.date }}</p>{{ review.rest }}<p>{{ review.rating }}</p></div>
                             <div class="col-sm-8"><p>{{ review.text }}</p></div>

@@ -6,10 +6,11 @@ fastfood.controller('searchController', function($scope, $log, $state, $http, se
 
 	//$http.get('/json/database.json').then(console.log('success'), console.log('Error'));
 
-	$http.get('http://127.0.0.1/fastfood.local/json/database.json')
-	.success(function() {
-		//console.log('success');
-	})
+	$http.get('http://fastfood.local/json/database.json')
+	.success(function(data) {
+  		$scope.data = data;
+  		console.log(data);
+    });
 
   $scope.searchLocation = searchService.search;
   console.log("search query :" + $scope.search);

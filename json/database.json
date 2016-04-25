@@ -1,304 +1,355 @@
 {
-	"restaurant": {
-		"list": [
-			{ 
-				"name": "Chowking",
-				"pic": "../img/chowking_logo.jpg",
-				"desc": "Chinese Restaurant",
-				"location": [ "Manila", "Makati" ],
-				"rating": 4,
-				"budget": 3,
-				"openHours": 6,
-				"closedHours": 21,
-				"onlinePay": true,
-				"preOrder": true,
-				"vouchers": false,
-				"deal": true,
-				"deliveryTime": 45,
-				"deliveryPrice": 20,
-				"dish": [ "Chaofan", "Lauriat", "Special" ],
+	"restaurant": 
+	[
+		{ 
+			"name": "Chowking",
+			"pic": "../img/chowking_logo.jpg",
+			"desc": "Chinese Restaurant",
+			"location": [ "Manila", "Makati" ],
+			"rating": "4",
+			"budget": "3",
+			"openHours": "6",
+			"closedHours": "21",
+			"onlinePay": "true",
+			"preOrder": "true",
+			"vouchers": "false",
+			"deal": "true",
+			"deliveryTime": "45",
+			"deliveryPrice": "20",
+			"dish": [ "Chaofan", "Lauriat", "Special" ],
 
-				"menu": [
-					{
-						"name": "Yang Chowfan",
-						"pic": "../img/yang_chowfan.jpg",
-						"desc": "Pork Fried Rice",
-						"dish": "Chaofan",
-						"price": 210
-					}, 
-					{
-						"name": "Beef Siomai Chao Fan with Beef",
-						"pic": "../img/beef_siomai.jpg",
-						"desc": "Lumpiang shanghai, pancit canton, pork siomai, chicharap, buchi",
-						"dish": "Lauriat",
-						"price": 109
-					}, 
-					{
-						"name": "4pc Lumpiang Shanghai Rice ala Carte",
-						"pic": "../img/lumpia_rice.jpg",
-						"desc": "Fried chicken, pancit canton, pork siomai, chicharap, buchi",
-						"dish": "Lauriat",
-						"price": 94
-					}, 
-					{
-						"name": "Solo: Pork Chao Fan with Egg with Pork Soimai",
-						"pic": "../img/solo_pork_chaofan.jpg",
-						"desc": "Pork, sweet and sour sauce, pancit, egg fried rice, chicharap, buchi",
-						"dish": "Lauriat",
-						"price": 88
-					}, 
-					{
-						"name": "Chinese Style Pork Chop Lauriat",
-						"pic": "../img/chinese_pork.jpg",
-						"desc": "Pork chop, special sauce, pancit canton, pork siomai, chicharap, buchi",
-						"dish": "Special",
-						"price": 175
-					}
-				],
+			"menu": [
+				{
+					"name": "Yang Chowfan",
+					"pic": "../img/yang_chowfan.jpg",
+					"desc": "Pork Fried Rice",
+					"dish": "Chaofan",
+					"price": "210"
+				}, 
+				{
+					"name": "Beef Siomai Chao Fan with Beef",
+					"pic": "../img/beef_siomai.jpg",
+					"desc": "Lumpiang shanghai, pancit canton, pork siomai, chicharap, buchi",
+					"dish": "Lauriat",
+					"price": "109"
+				}, 
+				{
+					"name": "4pc Lumpiang Shanghai Rice ala Carte",
+					"pic": "../img/lumpia_rice.jpg",
+					"desc": "Fried chicken, pancit canton, pork siomai, chicharap, buchi",
+					"dish": "Lauriat",
+					"price": "94"
+				}, 
+				{
+					"name": "Solo: Pork Chao Fan with Egg with Pork Soimai",
+					"pic": "../img/solo_pork_chaofan.jpg",
+					"desc": "Pork, sweet and sour sauce, pancit, egg fried rice, chicharap, buchi",
+					"dish": "Lauriat",
+					"price": "88"
+				}, 
+				{
+					"name": "Chinese Style Pork Chop Lauriat",
+					"pic": "../img/chinese_pork.jpg",
+					"desc": "Pork chop, special sauce, pancit canton, pork siomai, chicharap, buchi",
+					"dish": "Special",
+					"price": "175"
+				}
+			],
 
-				"review": [
-					{
-				  		"name": "Peter",
-				  		"rating": 5,
-				  		"review": "I was paid to write this review"
-					}
-				]
-			}, {
-				"name": "Wendys",
-				"pic": "../img/wendys_logo.png",
-				"desc": "Burgers",
-				"location": [ "Manila", "Mandaluyong" ],
-				"rating": 4,
-				"budget": 4,
-				"openHours": 8,
-				"closedHours": 19,
-				"onlinePay": true,
-				"preOrder": false,
-				"vouchers": true,
-				"deal": true,
-				"deliveryTime": 40,
-				"deliveryPrice": 20,
-				"dish": [ "Burger", "Rice Meal", "combo" ],
+			"review": [
+				{
+			  		"name": "Peter",
+			  		"rating": "5",
+			  		"review": "I was paid to write this review"
+				}
+			]
+		}, {
+			"name": "Wendys",
+			"pic": "../img/wendys_logo.png",
+			"desc": "Burgers",
+			"location": [ "Manila", "Mandaluyong" ],
+			"rating": "4",
+			"budget": "4",
+			"openHours": "8",
+			"closedHours": "19",
+			"onlinePay": "true",
+			"preOrder": "false",
+			"vouchers": "true",
+			"deal": "true",
+			"deliveryTime": "40",
+			"deliveryPrice": "20",
+			"dish": [ "Burger", "Rice Meal", "combo" ],
 
-				"menu": [
-					{
-						"name": "Bacon Mushroom Melt",
-						"pic": "../img/bacon_combo.jpg",
-						"desc": "Grilled beef patty, American cheese, crispy bacon mushroom cheddar sauce, toasted buttered buns",
-						"dish": "Burger",
-						"price": 91
-					}, {
-						"name": "Baconator Single",
-						"pic": "../img/baconator_single.jpg",
-						"desc": "Single beef patty, crispy bacon, melted permium cheese, buns",
-						"dish": "Burger",
-						"price": 145
-					}, {
-						"name": "Two Pieces Fried Chicken with Rice",
-						"pic": "../img/chicken_rice.jpg",
-						"desc": "2 pcs Signature fried chicken, rice",
-						"dish": "Rice Meal",
-						"price": 141
-					}, {
-						"name": "Bacon Mushroom Melt Bundle",
-						"pic": "../img/bacon_mushroom.jpg",
-						"desc": "For 3-4 (3-4 pcs BMM, 3-4 Fries Regular, 3-4 12oz Iced Tea)",
-						"dish": "combo",
-						"price": 498
-					}, {
-						"name": "Homestyle Chicken Fillter",
-						"pic": "../img/homestyle.jpg",
-						"desc": "Breaded fried chicken brest fillet, mayonnaise tomato, lettuce, toasted, primium Kaiser bun",
-						"dish": "Burger",
-						"price": 109
-					}
-				],
+			"menu": [
+				{
+					"name": "Bacon Mushroom Melt",
+					"pic": "../img/bacon_combo.jpg",
+					"desc": "Grilled beef patty, American cheese, crispy bacon mushroom cheddar sauce, toasted buttered buns",
+					"dish": "Burger",
+					"price": "91"
+				}, {
+					"name": "Baconator Single",
+					"pic": "../img/baconator_single.jpg",
+					"desc": "Single beef patty, crispy bacon, melted permium cheese, buns",
+					"dish": "Burger",
+					"price": "145"
+				}, {
+					"name": "Two Pieces Fried Chicken with Rice",
+					"pic": "../img/chicken_rice.jpg",
+					"desc": "2 pcs Signature fried chicken, rice",
+					"dish": "Rice Meal",
+					"price": "141"
+				}, {
+					"name": "Bacon Mushroom Melt Bundle",
+					"pic": "../img/bacon_mushroom.jpg",
+					"desc": "For 3-4 (3-4 pcs BMM, 3-4 Fries Regular, 3-4 12oz Iced Tea)",
+					"dish": "combo",
+					"price": "498"
+				}, {
+					"name": "Homestyle Chicken Fillter",
+					"pic": "../img/homestyle.jpg",
+					"desc": "Breaded fried chicken brest fillet, mayonnaise tomato, lettuce, toasted, primium Kaiser bun",
+					"dish": "Burger",
+					"price": "109"
+				}
+			],
 
-				"review": [
-					{
-				  		"name": "Peter",
-				  		"rating": 5,
-				  		"review": "Burgers!!!"
-					}
-				]
-			}, {
-				"name": "Red Ribbon",
-				"pic": "../img/redribbon_logo.jpg",
-				"desc": "Cake & Bakery",
-				"location": [ "Makati", "Mandaluyong" ],
-				"rating": 3,
-				"budget": 5,
-				"openHours": 9,
-				"closedHours": 18,
-				"onlinePay": false,
-				"preOrder": true,
-				"vouchers": true,
-				"deal": true,
-				"deliveryTime": 60,
-				"deliveryPrice": 20,
-				"dish": [ "Cake", "Bakery" ],
+			"review": [
+				{
+			  		"name": "Peter",
+			  		"rating": "5",
+			  		"review": "Burgers!!!"
+				}
+			]
+		}, {
+			"name": "Red Ribbon",
+			"pic": "../img/redribbon_logo.jpg",
+			"desc": "Cake & Bakery",
+			"location": [ "Makati", "Mandaluyong" ],
+			"rating": "3",
+			"budget": "5",
+			"openHours": "9",
+			"closedHours": "18",
+			"onlinePay": "false",
+			"preOrder": "true",
+			"vouchers": "true",
+			"deal": "true",
+			"deliveryTime": "60",
+			"deliveryPrice": "20",
+			"dish": [ "Cake", "Bakery" ],
 
-				"menu": [
-					{
-						"name": "Ube Cream Roll",
-						"pic": "../img/ube_cake.jpg",
-						"desc": "Classic ube chiffon with delicios cream filling and coverd with ube crumbs and cream",
-						"dish": "Cake",
-						"price": 198
-					}, {
-						"name": "Choco Caramel Roll",
-						"pic": "../img/choco_cake.jpg",
-						"desc": "Moist chocolate chiffon with creamy caramel filling covered with rich chocolate icing and topped with choco swuare and caramel syrup",
-						"dish": "Cake",
-						"price": 214
-					}, {
-						"name": "Chocolate Dedication Cake",
-						"pic": "../img/chocolate_cake.jpg",
-						"desc": "Rich chocolate cake with fudgy chocolate icing and fillind and topped with colorful sugar confetti, donts and stars, it can be personalized your own special message.",
-						"dish": "Cake",
-						"price": 352
-					}, {
-						"name": "Cookies and Cream Mamon",
-						"pic": "../img/cookies_cream_mamon.jpg",
-						"desc": "Melt-in-your-mouth choco chiffon topped with heavenly white chocolte and cookies bits",
-						"dish": "Bakery",
-						"price": 26.40
-					}, {
-						"name": "Caramel Mamon",
-						"pic": "../img/caramel_mamon.jpg",
-						"desc": "Melt-in-your-mouth white chiffon topped with yummy caramel nuts.",
-						"dish": "Bakery",
-						"price": 26.40
-					}
-				],
+			"menu": [
+				{
+					"name": "Ube Cream Roll",
+					"pic": "../img/ube_cake.jpg",
+					"desc": "Classic ube chiffon with delicios cream filling and coverd with ube crumbs and cream",
+					"dish": "Cake",
+					"price": "198"
+				}, {
+					"name": "Choco Caramel Roll",
+					"pic": "../img/choco_cake.jpg",
+					"desc": "Moist chocolate chiffon with creamy caramel filling covered with rich chocolate icing and topped with choco swuare and caramel syrup",
+					"dish": "Cake",
+					"price": "214"
+				}, {
+					"name": "Chocolate Dedication Cake",
+					"pic": "../img/chocolate_cake.jpg",
+					"desc": "Rich chocolate cake with fudgy chocolate icing and fillind and topped with colorful sugar confetti, donts and stars, it can be personalized your own special message.",
+					"dish": "Cake",
+					"price": "352"
+				}, {
+					"name": "Cookies and Cream Mamon",
+					"pic": "../img/cookies_cream_mamon.jpg",
+					"desc": "Melt-in-your-mouth choco chiffon topped with heavenly white chocolte and cookies bits",
+					"dish": "Bakery",
+					"price": "26.40"
+				}, {
+					"name": "Caramel Mamon",
+					"pic": "../img/caramel_mamon.jpg",
+					"desc": "Melt-in-your-mouth white chiffon topped with yummy caramel nuts.",
+					"dish": "Bakery",
+					"price": "26.40"
+				}
+			],
 
-				"review": [
-					{
-				  		"name": "Peter",
-				  		"rating": 5,
-				  		"review": "Cake!!!"
-					}
-				]	
-			}, {
-				"name": "Yellow Cab",
-				"pic": "../img/yellowcab_logo.png",
-				"desc": "Pizza",
-				"location": [ "Manila", "Makati", "Muntinlupa" ],
-				"rating": 2,
-				"budget": 2,
-				"openHours": 8,
-				"closedHours": 21,
-				"onlinePay": true,
-				"preOrder": true,
-				"vouchers": true,
-				"deal": false,
-				"deliveryTime": 35,
-				"deliveryPrice": 20,
-				"dish": [ "Pizza", "Rice" , "Pasta"],
+			"review": [
+				{
+			  		"name": "Peter",
+			  		"rating": "5",
+			  		"review": "Cake!!!"
+				}
+			]	
+		}, {
+			"name": "Yellow Cab",
+			"pic": "../img/yellowcab_logo.png",
+			"desc": "Pizza",
+			"location": [ "Manila", "Makati", "Muntinlupa" ],
+			"rating": "2",
+			"budget": "2",
+			"openHours": "8",
+			"closedHours": "21",
+			"onlinePay": "true",
+			"preOrder": "true",
+			"vouchers": "true",
+			"deal": "false",
+			"deliveryTime": "35",
+			"deliveryPrice": "20",
+			"dish": [ "Pizza", "Rice" , "Pasta"],
 
-				"menu": [
-					{
-						"name": "Unlimate Overload",
-						"pic": "../img/unlimate_overload.jpg",
-						"desc": "Beef, bacon, perpperoni, salami, mushroom, olives, bell peppers, onion, garlic, pineapple, mozzarella, cheddar cheese",
-						"dish": "Pizza",
-						"price": 314
-					}, {
-						"name": "Hawaiian Overload",
-						"pic": "../img/hawaiian_overload.jpg",
-						"desc": "Premium ham, glazed pineapple, mozzarella, cheddar cheese",
-						"dish": "Pizza",
-						"price": 281
-					}, {
-						"name": "All-Meat and Cheese Overload",
-						"pic": "../img/all_meat_cheese_overload.jpg",
-						"desc": "Italian sausage, salami, perpperoni, bacon, beef, mozzarella, cheddar, permesan, special cheese",
-						"dish": "Pizza",
-						"price": 314
-					}, {
-						"name": "Spaghetti Supreme Pan",
-						"pic": "../img/Spaghetti_supreme.jpg",
-						"desc": "Tomato meat sause, spahhheti noodles, grated cheese",
-						"dish": "Pasta",
-						"price": 55
-					}, {
-						"name": "1pc Jumbo Crunchy Chicken Meal",
-						"pic": "../img/jumbo.jpg",
-						"desc": "Chicken, special breading mix, rice",
-						"dish": "Rice",
-						"price": 90
-					}
-				],
+			"menu": [
+				{
+					"name": "Unlimate Overload",
+					"pic": "../img/unlimate_overload.jpg",
+					"desc": "Beef, bacon, perpperoni, salami, mushroom, olives, bell peppers, onion, garlic, pineapple, mozzarella, cheddar cheese",
+					"dish": "Pizza",
+					"price": "314"
+				}, {
+					"name": "Hawaiian Overload",
+					"pic": "../img/hawaiian_overload.jpg",
+					"desc": "Premium ham, glazed pineapple, mozzarella, cheddar cheese",
+					"dish": "Pizza",
+					"price": "281"
+				}, {
+					"name": "All-Meat and Cheese Overload",
+					"pic": "../img/all_meat_cheese_overload.jpg",
+					"desc": "Italian sausage, salami, perpperoni, bacon, beef, mozzarella, cheddar, permesan, special cheese",
+					"dish": "Pizza",
+					"price": "314"
+				}, {
+					"name": "Spaghetti Supreme Pan",
+					"pic": "../img/Spaghetti_supreme.jpg",
+					"desc": "Tomato meat sause, spahhheti noodles, grated cheese",
+					"dish": "Pasta",
+					"price": "55"
+				}, {
+					"name": "1pc Jumbo Crunchy Chicken Meal",
+					"pic": "../img/jumbo.jpg",
+					"desc": "Chicken, special breading mix, rice",
+					"dish": "Rice",
+					"price": "90"
+				}
+			],
 
-				"review": [
-					{
-				  		"name": "Peter",
-				  		"rating": 5,
-				  		"review": "Pizza!!!"
-					}
-				]
-			}, {
-				"name": "Starbucks",
-				"pic": "../img/starbucks_logo.gif",
-				"desc": "Coffe, Tea",
-				"location": [ "Manila", "Muntinlupa", "Mandaluyong" ],
-				"rating": 5,
-				"budget": 1,
-				"openHours": 7,
-				"closedHours": 21,
-				"onlinePay": true,
-				"preOrder": true,
-				"vouchers": true,
-				"deal": true,
-				"deliveryTime": 55,
-				"deliveryPrice": 20,
-				"dish": [ "Coffee", "Tea" ],
+			"review": [
+				{
+			  		"name": "Peter",
+			  		"rating": "5",
+			  		"review": "Pizza!!!"
+				}
+			]
+		}, {
+			"name": "Starbucks",
+			"pic": "../img/starbucks_logo.gif",
+			"desc": "Coffe, Tea",
+			"location": [ "Manila", "Muntinlupa", "Mandaluyong" ],
+			"rating": "5",
+			"budget": "1",
+			"openHours": "7",
+			"closedHours": "21",
+			"onlinePay": "true",
+			"preOrder": "true",
+			"vouchers": "true",
+			"deal": "true",
+			"deliveryTime": "55",
+			"deliveryPrice": "20",
+			"dish": [ "Coffee", "Tea" ],
 
-				"menu": [
-					{
-						"name": "Caffe Latte",
-						"pic": "../img/coffee_latte.jpg",
-						"desc": "",
-						"dish": "Coffee",
-						"price": 20
-					}, {
-						"name": "Chocolate Cream Chip Frappuccino Blended Beverage",
-						"pic": "../img/chocolate_cream.jpg",
-						"desc": "",
-						"dish": "Coffee",
-						"price": 18
-					}, {
-						"name": "Caramel Macchiato",
-						"pic": "../img/caramel_macchiato.jpg",
-						"desc": "",
-						"dish": "Coffee",
-						"price": 15.5
-					}, {
-						"name": "Freshly Brewed Tea",
-						"pic": "../img/freshly_brewed.jpg",
-						"desc": "",
-						"dish": "Tea",
-						"price": 12
-					}, {
-						"name": "Ice Shaken Lemon Tea",
-						"pic": "../img/ice_shaken_tea.jpg",
-						"desc": "",
-						"dish": "Tea",
-						"price": 11
-					}
-				],
+			"menu": [
+				{
+					"name": "Caffe Latte",
+					"pic": "../img/coffee_latte.jpg",
+					"desc": "",
+					"dish": "Coffee",
+					"price": "20"
+				}, {
+					"name": "Chocolate Cream Chip Frappuccino Blended Beverage",
+					"pic": "../img/chocolate_cream.jpg",
+					"desc": "",
+					"dish": "Coffee",
+					"price": "18"
+				}, {
+					"name": "Caramel Macchiato",
+					"pic": "../img/caramel_macchiato.jpg",
+					"desc": "",
+					"dish": "Coffee",
+					"price": "15.5"
+				}, {
+					"name": "Freshly Brewed Tea",
+					"pic": "../img/freshly_brewed.jpg",
+					"desc": "",
+					"dish": "Tea",
+					"price": "12"
+				}, {
+					"name": "Ice Shaken Lemon Tea",
+					"pic": "../img/ice_shaken_tea.jpg",
+					"desc": "",
+					"dish": "Tea",
+					"price": "11"
+				}
+			],
 
-				"review": [
-					{
-				  		"name": "Peter",
-				  		"rating": 5,
-				  		"review": "Coffee!!!"
-					}
-				]
-			}
-		],
+			"review": [
+				{
+			  		"name": "Peter",
+			  		"rating": "5",                                              
+			  		"review": "Coffee!!!"
+				}
+			]
+		}
+	],
 
-		"cuisines": ["Asian", "Cake", "Chinese", "Pizza", "Coffee"],
-		"location": ["Manila", "Makati", "Mandaluyong", "Muntinlupa"]
-	};
+	"cuisines": ["Asian", "Cake", "Chinese", "Pizza", "Coffee"],
+	"location": ["Manila", "Makati", "Mandaluyong", "Muntinlupa"],
+
+
+	"order": {
+		"list": [{}],
+		"total": "0",
+		"subtotal": "0",
+		"voucher": "0",
+		"tax": "0",
+		"deliveryAdd": "Pili Drive, UPLB, Los Banos, Laguna, 45218",
+		"deliveryTime": "",
+		"deliveryPrice": "0",
+		"payment_Type": ""
+	},
+
+	"account": [
+		{ 
+			"id": "0",
+
+			"info": {
+				"firstname": "Jaden Drift",
+				"lastname": "Narisma",
+				"email": "dummy@email.com",
+				"password": "******",
+				"pic": ""
+			},
+
+			"add": [
+				{
+					"address1": "Pili Drive",
+					"address2": "UPLB",
+					"address3": "24",
+					"city": "Los Banos",
+					"state": "Laguna",
+					"zip": "45218"
+				}
+			],
+
+			"card": [ 
+				{
+					"number": "45-564-455-89",
+					"exp_month": "10",
+					"exp_year": "2020",
+					"cvv": "4541",
+					"zip": "7845"
+				}
+			],
+			
+			"order_history": [],
+
+			"reviews": []
+		}
+	]
 }

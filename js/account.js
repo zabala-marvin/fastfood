@@ -1,26 +1,60 @@
-fastfood.controller('accountController', function($scope, $state, accountService, orderService) {
+fastfood.controller('accountController', function($scope, $state, $http, accountService, orderService) {
+    
+    $scope.card = {};
+    $scope.card.button = "Add New Card";
+    $scope.add = {};
+    $scope.add.button = "Add New Address";
+    $scope.data = {};
+    $scope.update;
+
+
+    $http.get('http://fastfood.local/json/database.json').success(function(data) {
+  		$scope.data = data;
+  		console.log($scope.data);
+  		console.log($scope.data.account[0].info.firstname);
+    });
+
+    //console.log($scope.data);
+    //console.log($scope.data.account.info.firstname);
 
 	$scope.account = accountService.account;
 	$scope.order = orderService.order;
 
-	console.log($scope.account);
+	//console.log($scope.account);
 
 	$scope.$watch('account', function () {
 		accountService.account = $scope.account;
 	});
-
 	$scope.update_info =  function (user) {
 		$scope.account.list[0].info = angular.copy(user);
-		console.log($scope.account.list[0].info);
+		//console.log($scope.account.list[0].info);
 	};
-
 	$scope.update_add = function (add) {
 		$scope.account.list[0].add.push(add);
 	};
-
-	$scope.update_card = function (card) {
-		$scope.account.list[0].card.push(card);
+	$scope.update_card = function (card, index) {
+		if (index)
+			console.log("true");
+		else
+			console.log("false");
+		//$scope.account.list[0].card.push(card);
 	};
+	$scope.display_card = function (index) {
+		$scope.card.number = $scope.data.account[0].card[index].number;
+		$scope.card.cvv = $scope.data.account[0].card[index].cvv;
+		$scope.card.zip = $scope.data.account[0].card[index].zip;
+		$scope.card.button = "Save";
+		$scope.update = index;
+	}
+	$scope.display_add = function (index) {
+		$scope.add.address1 = $scope.data.account[0].add[index].address1;
+		$scope.add.address2 = $scope.data.account[0].add[index].address2;
+		$scope.add.city = $scope.data.account[0].add[index].city;
+		$scope.add.state = $scope.data.account[0].add[index].state;
+		$scope.add.zip = $scope.data.account[0].add[index].zip;
+		$scope.add.button = "Save";
+		$scope.update = index;
+	}
 });
 
 fastfood.service('accountService', function () {

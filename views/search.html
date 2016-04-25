@@ -39,9 +39,9 @@
                             </form>
                             <form>
                                 <p>Change Location</p>
-                                <select class="form-control" ng-Model="filter_location">
+                                <select class="form-control" ng-model="location">
                                     <option value="" select>Location</option>
-                                    <option ng-repeat="location in restaurant.location" value="{{ location }}">{{ location }}</option>
+                                    <option ng-repeat="location in data.location" value="{{ location }}">{{ location }}</option>
                                 </select>
                             </form>
                         </td>
@@ -79,7 +79,7 @@
                                         <input type="radio" name="cuisines" ng-value="cuisine" ng-click="cuisine_click()">All Cuisines
                                     </label>
                                 </div>
-                                <div class="radio" ng-repeat="cuisine in restaurant.cuisines">
+                                <div class="radio" ng-repeat="cuisine in data.cuisines">
                                     <label>
                                         <input type="radio" name="cuisines" ng-value="cuisine" ng-click="cuisine_click(cuisine)">{{ cuisine }}
                                     </label>
@@ -101,18 +101,18 @@
                         </td>
                     </tr>
                     <tr class="nav-result-body search-animate-container search-repeat" 
-                        ng-repeat="restaurant in restaurant.list | 
+                        ng-repeat="restaurant in data.restaurant | 
                                 orderBy: filter_order | 
                                 filter: {name: search.text, 
                                         onlinePay: filter_onlinePay(onlinePay), 
                                         preOrder: filter_preOrder(preOrder), 
                                         vouchers: filter_vouchers(vouchers), 
                                         deal: filter_deal(deal), 
-                                        location: searchLocation, 
+                                        location: location, 
                                         desc: cuisine } ">
                         <td ng-click="order(restaurant.name)">
                             <div class="col-lg-6">
-                                <div class="col-lg-2"><img src="{{ restaurant.pic }}" class="rest-pic-sm"></div>
+                                <div class="col-lg-2"><img ng-src="{{ restaurant.pic }}" class="rest-pic-sm"></div>
                                 <div class="col-lg-10">
                                     <div class="col-lg-12">
                                         <h5>{{ restaurant.name }}</h5>
