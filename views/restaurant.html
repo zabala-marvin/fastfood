@@ -49,19 +49,17 @@
     <div class="container container-order" ng-repeat="menu_type in data.restaurant | filter: { name: search }">
         <div class="row">
             <!-- Link -->
-            <div class="col-lg-12 nav-nav">
-                <ul class="list-inline nav-link text-center pull-left">
-                    <li><a ui-sref="home"><p>Home</p></a></li>
-                    <li active><a ui-sref="restaurant.order"><p>Menu</p></a></li>
-                    <li><a ui-sref="restaurant.review"><p>Review</p></a></li>
-                    <li><a ui-sref=""><p>Info</p></a></li>
+            <div class="col-lg-12">
+                <ul class="btn-nav-list list-inline pull-left">
+                    <li active><i class="fa fa-2x fa-shopping-bag"></i></li>
+                    <li><i class="fa fa-2x fa-star"></i></li>
+                    <li><i class="fa fa-2x fa-question"></i></li>
                 </ul>
             </div>
 
                 <section ui-view>
                 </section>
             
-            </div>
         </div>
     </div>
 </section>

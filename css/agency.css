@@ -7,6 +7,52 @@ footer {
     background-color: #000;
 }
 
+#services {
+    padding: 10px;
+}
+
+.btn-nav-list li {
+    padding: 0px;
+}
+
+.btn-nav-list i {
+    margin-top: 32px;
+    padding-bottom: 0px;
+    padding-top: 15px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+.btn-nav-list i:hover,
+.btn-nav-list i:focus,
+.btn-nav-list i:active {
+    background-color: #FF1493;
+    border-color: #FF1493;
+    outline: 0;
+}
+
+.rest-nav-list i {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.btn-nav {
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
 .logo {
     width: 70px;
     font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
@@ -239,6 +285,10 @@ ul.nav-link li a {
 
 .nav-tabs a {
     color: #000;
+}
+
+.nav-result {
+    margin-bottom: 20px;
 }
 
 .nav-result-body p {
