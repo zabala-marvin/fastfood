@@ -7,6 +7,17 @@ footer {
     background-color: #000;
 }
 
+.logo {
+    width: 70px;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+
+.logoheader {
+    color: #FF1493;
+    font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+    font-size: 50px;
+}
+
 .nav-body {
     padding-top: 10px;
     background-color: #ddd;
@@ -222,7 +233,7 @@ ul.nav-link li a {
 
 .list-group-item.active {
     color: #000;
-    background-color: #fed136;
+    background-color: #FF1493;
     border: none;
 }
 
@@ -279,7 +290,7 @@ td {
 }
 
 .nav-order-cart :first-child , .nav-result-header :first-child {
-    color: #fed136;
+    color: #FF1493;
     background-color: #000;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -401,7 +412,7 @@ td {
 }
 
 .text-primary {
-    color: #fed136
+    color: #FF1493
 }
 
 p {
@@ -422,7 +433,7 @@ a.active {
 }
 
 a {
-    color: #fed136
+    color: #FF1493
 }
 
 a:hover,
@@ -458,8 +469,8 @@ h6 {
 .btn-primary {
     width: 100%;
     color: #000000;
-    background-color: #fed136;
-    border-color: #fed136;
+    background-color: #FF1493;
+    border-color: #FF1493;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700
@@ -496,25 +507,26 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary.disabled.active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
-    background-color: #fed136;
-    border-color: #fed136
+    background-color: #FF1493;
+    border-color: #FF1493
 }
 
 .btn-primary .badge {
-    color: #fed136;
+    color: #FF1493;
     background-color: #fff
 }
 
 .btn-xl {
     color: #fff;
-    background-color: #fed136;
-    border-color: #fed136;
+    background-color: #FF1493;
+    border-color: #FF1493;
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    border-radius: 3px;
     font-size: 18px;
-    padding: 20px 40px
+    padding: 20px 30px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 
 .btn-xl:hover,
@@ -548,12 +560,12 @@ fieldset[disabled] .btn-xl:active,
 .btn-xl.disabled.active,
 .btn-xl[disabled].active,
 fieldset[disabled] .btn-xl.active {
-    background-color: #fed136;
-    border-color: #fed136
+    background-color: #FF1493;
+    border-color: #FF1493
 }
 
 .btn-xl .badge {
-    color: #fed136;
+    color: #FF1493;
     background-color: #fff
 }
 
@@ -563,7 +575,7 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-brand {
-    color: #fed136;
+    color: #FF1493;
     font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 
@@ -579,8 +591,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-toggle {
-    background-color: #fed136;
-    border-color: #fed136
+    background-color: #FF1493;
+    border-color: #FF1493
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -589,7 +601,7 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #fed136
+    background-color: #FF1493
 }
 
 .navbar-default .nav li a {
@@ -602,14 +614,14 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
-    color: #fed136;
+    color: #FF1493;
     outline: 0
 }
 
 .navbar-default .navbar-nav>.active>a {
     border-radius: 0;
     color: #fff;
-    background-color: #fed136
+    background-color: #FF1493
 }
 
 .navbar-default .navbar-nav>.active>a:hover,
@@ -870,7 +882,7 @@ section h3.section-subheading {
     height: 80px;
     position: absolute;
     z-index: 100;
-    background-color: #fed136;
+    background-color: #FF1493;
     color: #fff;
     border-radius: 100%;
     border: 7px solid #f1f1f1;
@@ -1042,7 +1054,7 @@ section#contact .form-group textarea.form-control {
 }
 
 section#contact .form-control:focus {
-    border-color: #fed136;
+    border-color: #FF1493;
     box-shadow: none
 }
 
@@ -1127,7 +1139,7 @@ ul.nav-link li a:active,
 .sample i:hover,
 .sample i:focus,
 .sample i:active {
-    background-color: #fed136
+    background-color: #FF1493
 }
 
 .btn:focus,
@@ -1139,7 +1151,7 @@ ul.nav-link li a:active,
 
 ::-moz-selection {
     text-shadow: none;
-    background: #fed136
+    background: #FF1493
 }
 
 ::selection {
@@ -1156,5 +1168,5 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: #fed136
+    webkit-tap-highlight-color: #FF1493
 }
